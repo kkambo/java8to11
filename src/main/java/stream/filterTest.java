@@ -17,18 +17,11 @@ public class filterTest {
 
         humanList.stream().filter(h ->h.getName().equals("haha")).forEach(s -> System.out.println(s));
 
-        String[] arr = new String[]{"a", "b","c"};
 
-        Stream<String> stream = Arrays.stream(arr);
-        stream.forEach(s -> System.out.println(s));
+        Stream<String> builderStream = Stream.<String>builder().add("Eric").add("Elena").add("Java").build();
+        System.out.println(builderStream);
 
-        Arrays.stream(arr).forEach(s -> System.out.println(s));
-
-        List list = Arrays.asList("a","b","c");
-        System.out.println(list);
+        builderStream.forEach(s -> System.out.println(s));
     }
-
-
-
 
 }
